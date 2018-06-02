@@ -15,7 +15,7 @@ getdeps () {
 }
 
 loadarch () {
-	apilvl=21
+	apilvl=24
 	# ndk_triple: what the toolchain actually is
 	# cc_triple: what Google pretends the toolchain is
 	if [ "$1" == "armv7l" ]; then
