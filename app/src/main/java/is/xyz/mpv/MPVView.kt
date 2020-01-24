@@ -61,12 +61,16 @@ internal class MPVView(context: Context, attrs: AttributeSet) : SurfaceView(cont
             MPVLib.setOptionString("gpu-api", "vulkan")
         }
 
-        // ao: set optimal sample rate for opensles, to get better audio playback
-        val sampleRate = AudioTrack.getNativeOutputSampleRate(AudioManager.STREAM_MUSIC)
-        Log.v(TAG, "Device reports optimal sample rate $sampleRate")
-
-        // TODO: better be optional as it may not be ideal if the user switches audio device during playback.
-        MPVLib.setOptionString("audio-samplerate", sampleRate.toString())
+        // set ao
+        val audioOutput = sharedPreferences.getString("audio_output", "")
+        if (audioOutput == "audiotrack") {
+            MPVLib.setOptionString("ao", "audiotrack")
+        } else if (audioOutput == "opensles") {
+            val sampleRate = AudioTrack.getNativeOutputSampleRate(AudioManager.STREAM_MUSIC)
+            Log.v(TAG, "Device reports optimal sample rate $sampleRate")
+            MPVLib.setOptionString("audio-samplerate", sampleRate.toString())
+            MPVLib.setOptionString("ao", "opensles")
+        }
 
         // set non-complex options
 
