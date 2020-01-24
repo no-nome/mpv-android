@@ -93,4 +93,13 @@
         <item>lua1</item>
         <item>lua2</item>
     </string-array>
+
+    <string-array name="gpu_api_list" translatable="false">
+        <item>OpenGL ES</item>
+        <item>Vulkan</item>
+    </string-array>
+    <string-array name="gpu_api_values" translatable="false">
+        <item>opengl</item>
+        <item>vulkan</item>
+    </string-array>
 </resources>
