@@ -52,6 +52,15 @@ internal class MPVView(context: Context, attrs: AttributeSet) : SurfaceView(cont
                        "(${Build.VERSION.SDK_INT} < ${Build.VERSION_CODES.M})")
         }
 
+        // set gpu-api
+        val gpuApi = sharedPreferences.getString("gpu_api", "")
+        if (gpuApi == "opengl") {
+            MPVLib.setOptionString("gpu-context", "android")
+        } else if (gpuApi == "vulkan") {
+            MPVLib.setOptionString("gpu-context", "androidvk")
+            MPVLib.setOptionString("gpu-api", "vulkan")
+        }
+
         // ao: set optimal sample rate for opensles, to get better audio playback
         val sampleRate = AudioTrack.getNativeOutputSampleRate(AudioManager.STREAM_MUSIC)
         Log.v(TAG, "Device reports optimal sample rate $sampleRate")
@@ -110,7 +119,6 @@ internal class MPVView(context: Context, attrs: AttributeSet) : SurfaceView(cont
         // set options
 
         MPVLib.setOptionString("vo", "gpu")
-        MPVLib.setOptionString("gpu-context", "android")
         MPVLib.setOptionString("hwdec", hwdec)
         MPVLib.setOptionString("hwdec-codecs", "h264,hevc,mpeg4,mpeg2video,vp8,vp9")
         MPVLib.setOptionString("ao", "opensles")

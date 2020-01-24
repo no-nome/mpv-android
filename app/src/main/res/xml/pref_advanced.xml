@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <ListPreference
+        android:defaultValue="@string/pref_advanced_gpu_api_default"
+        android:key="gpu_api"
+        android:summary="@string/pref_advanced_gpu_api_summary"
+        android:entries="@array/gpu_api_list"
+        android:entryValues="@array/gpu_api_values"
+        android:title="@string/pref_advanced_gpu_api_title" />
+
     <is.xyz.mpv.ConfigEditDialog
         android:key=""
         app:filename="mpv.conf"

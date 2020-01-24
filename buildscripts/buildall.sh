@@ -15,7 +15,7 @@ getdeps () {
 }
 
 loadarch () {
-	apilvl=21
+	apilvl=24
 	# ndk_triple: what the toolchain actually is
 	# cc_triple: what Google pretends the toolchain is
 	if [ "$1" == "armv7l" ]; then
@@ -45,8 +45,10 @@ loadarch () {
 	export prefix_dir="$PWD/prefix/$prefix_name"
 	if [ $clang -eq 1 ]; then
 		export CC=$cc_triple-clang
+		export CXX=$cc_triple-clang++
 	else
 		export CC=$cc_triple-gcc
+		export CXX=$cc_triple-g++
 	fi
 }
 
