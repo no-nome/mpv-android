@@ -97,6 +97,10 @@
 
     <string name="pref_advanced_version">Version information</string>
 
+    <string name="pref_advanced_audio_output_title">Audio output</string>
+    <string name="pref_advanced_audio_output_default" translatable="false">audiotrack</string>
+    <string name="pref_advanced_audio_output_summary" translatable="false">%s</string>
+
     <string name="pref_advanced_mpvconf">Edit mpv.conf</string>
     <string name="pref_advanced_mpvconf_message">You can directly edit mpv\'s config here.\n\nImportant: mpv-android will overwrite some settings, so don\'t try to set e.g. \"dscale\" here.\nGenerally this applies to all settings that have a native equivalent in the settings menu.</string>
 
