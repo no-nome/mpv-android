@@ -40,7 +40,7 @@ cd ..
 
 # shaderc
 mkdir shaderc
-cat >shaderc/README <<<'HEREDOC'
+cat >shaderc/README <<'HEREDOC'
 Shaderc sources are provided by the NDK.
 see <ndk>/sources/third_party/shaderc
 HEREDOC
