@@ -93,4 +93,13 @@
         <item>lua1</item>
         <item>lua2</item>
     </string-array>
+
+    <string-array name="audio_output_list" translatable="false">
+        <item>AudioTrack</item>
+        <item>OpenSL ES</item>
+    </string-array>
+    <string-array name="audio_output_values" translatable="false">
+        <item>audiotrack</item>
+        <item>opensles</item>
+    </string-array>
 </resources>
