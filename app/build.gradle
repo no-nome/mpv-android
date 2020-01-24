@@ -6,7 +6,7 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 28
         versionCode 17
         versionName "2019-11-03-alpha"
