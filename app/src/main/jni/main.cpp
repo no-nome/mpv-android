@@ -51,7 +51,7 @@ jni_func(void, create, jobject appctx) {
     if (!g_mpv)
         die("context init failed");
 
-    mpv_request_log_messages(g_mpv, "debug");
+    mpv_request_log_messages(g_mpv, "v");
 }
 
 jni_func(void, init) {
