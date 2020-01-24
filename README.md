@@ -13,10 +13,6 @@ mpv-android is a video player for Android based on [libmpv](https://github.com/m
 * Play network streams with the "Open URL" function
 * Background playback, keyboard input supported
 
-## Downloads
-
-You can download mpv-android from the [Releases section](https://github.com/mpv-android/mpv-android/releases), [Google Play](https://play.google.com/store/apps/details?id=is.xyz.mpv) or from [F-Droid](https://apt.izzysoft.de/fdroid/index/apk/is.xyz.mpv).
-
 ## Building from source
 
 Take a look at [README.md](buildscripts/README.md) inside the `buildscripts` directory.
