@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <ListPreference
+        android:defaultValue="@string/pref_advanced_audio_output_default"
+        android:key="audio_output"
+        android:summary="@string/pref_advanced_audio_output_summary"
+        android:entries="@array/audio_output_list"
+        android:entryValues="@array/audio_output_values"
+        android:title="@string/pref_advanced_audio_output_title" />
+
     <is.xyz.mpv.ConfigEditDialog
         android:key=""
         app:filename="mpv.conf"
